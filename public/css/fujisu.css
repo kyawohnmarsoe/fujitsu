@@ -1,0 +1,134 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+.red-text{
+    color:#bd3249;
+}
+.black-text{
+    color:#000;
+}
+.white-text{
+    color:#fff;
+}
+.form-wapper{
+    background: #bd3249;
+    padding: 30px 8%;
+    border-radius: 30px;
+    margin: 80px 8%;
+}
+.free-wapper{
+    background: #bd3249;
+    border-radius: 30px;
+    padding: 20px 4%;
+}
+
+.form-wapper ul {
+    padding-left:15px;
+}
+.form-header{
+    font-size: 24px;
+    font-weight: 600;
+}
+.btn-fujisu{
+    color: #bd3249 ;
+    background: #fff ;
+    min-width: 200px;
+    text-transform: uppercase;
+    font-size:20px;
+    font-weight: 700;
+}
+.btn-fujisu:hover{
+    color: #fff ;
+    background: #f08d9d ;
+}
+.btn-fujisu:focus{
+    outline: none;
+    border-color: #bd3249 !important;
+    box-shadow: 0 0 10px #bd3249 !important;
+}
+.form-wapper input:focus{
+    outline: none;
+    border-color: #bd3249 !important;
+    box-shadow: 0 0 10px #bd3249 !important;
+}
+.form-wapper input{
+    border-radius: 20px;
+}
+.header-wapper{
+    background-image: url('../img/Untitled-1.jpg');
+    background-size: cover;
+   
+}
+.headersub-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+.header-title{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.header-warranty{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header-circles{
+    max-width: 250px;
+}
+.fujisu-logo{
+    max-width:150px;
+    position: absolute;
+    top:30px;
+    left:0px;
+}
+.fujisu-logo-mobile{
+    max-width:100px;
+ 
+}
+.fujisu-header{
+    width:100%;
+    margin-bottom: -50px;
+}
+.move-right{
+    margin-left:100px;
+}
+
+@media (max-width: 767.98px) { 
+    .header-wapper{
+        background-image: url('../img/mobile-header.svg');
+    }
+    .move-right{
+        margin-left:0;
+    }
+}
+@media (max-width: 1199.98px) { 
+    .fujisu-logo{
+        max-width:100px;
+        top:20px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .header-warranty{
+        font-size: 16px;
+    }
+    
+    .form-wapper{
+        padding: 30px 3%;
+        margin: 30px 0;
+    }
+    .form-header{
+        font-size: 19px;
+       
+    }
+  
+    .fujisu-header{
+       
+        margin-bottom: 0px;
+    }
+}
+
