@@ -24,3 +24,26 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// facebook 
+// Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+// Route::get('/callback', 'SocialAuthFacebookController@callback');
+
+// google 
+// Route::get('/google', 'Auth\LoginController@redirectToProvider');
+// Route::get('/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/google', 'SocialLoginController@redirectGoogle');
+Route::get('/callback', 'SocialLoginController@googleCallback');
+
+// Route::get('/facebook', 'SocialLoginController@redirectFacebook');
+// Route::get('/callback', 'SocialLoginController@facebookCallback');
+
+Route::get('/thankyou', function () {
+    return view('thankyou');
+});
+Route::post('/submitinfo', 'SocialLoginController@submitinfo');
+
+
+

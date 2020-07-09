@@ -89,53 +89,8 @@
      <!-- Form  -->
      <section>
             <div class="container ">
-                  <div class="form-wapper white-text ">
-                        <div class="form-header text-center">
-                       
-                        ONLINE EXCLUSIVE AWAITS. <br>
-                        SIGN UP NOW!
-                        </div>
-                        <p class=" text-center py-4 px-lg-5">
-                        Simply complete the form below and <br>
-                        our Sales Consultant will get in touch with you shortly.
-                        </p>
-                        
-                       
-                      <form method="post" action="{{ url('/submitinfo') }}" class="fujisu-form px-lg-5" >
-                      @csrf
-                        <div class="form-group px-lg-5 px-lg-5">
-                          <input type="text" class="form-control" name="name" placeholder="Name:" required />
-                        </div>
-                        <div class="form-group px-lg-5 px-lg-5">
-                          <input type="text" class="form-control" name="phone" placeholder="Phone Number:" required />
-                        </div>
-                        <div class="form-group px-lg-5 px-lg-5">
-                          <input type="email" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="E-mail Address:" required />
-                        </div>
-                       
-                        <div class="form-group form-check py-4">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                          <label class="form-check-label" for="exampleCheck1">By ticking the box and clicking Signing Up, I hereby: </label>
-                          <ul>
-                          <li>Agree and consent to the Privacy Policy</li>
-                          <li>Allow personnel to contact me</li>
-                          <li>Specifically and expressly consent to the use of website tracking methods, including cookies, and to the safe and secure transmission of your personal information in accordance with the Privacy Policy.</li>
-                          </ul>
-                        </div>
-                        <div class="form-group text-center">
-                        <button type="submit" class="btn btn-fujisu ">Submit</button>
-                        </div>
-                      </form>
-                     
-                      <div class="fujisu-or my-5"><span>OR</span></div>
-                      
-                      <div class="text-center mb-3">
-                          <p>Sign Up with</p>
-                            <a href="#"><img src="{{ asset('img/fb-button.svg') }}" alt="" class="social-login"></a>
-                            <a href="{{url('/google')}}"><img src="{{ asset('img/google-button.svg') }}" alt="" class="social-login"></a>
-                      </div>
-                    
-
+                  <div class="form-wapper white-text text-center">
+                    <h1>Thank You!</h1>
                   </div>
             </div>
      </section>

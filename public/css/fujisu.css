@@ -2,6 +2,8 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    background: #fff;
+    overflow-x: hidden;
 }
 .red-text{
     color:#bd3249;
@@ -57,9 +59,10 @@ body{
     border-radius: 20px;
 }
 .header-wapper{
-    background-image: url('../img/Untitled-1.jpg');
+    background-image: url('../img/top.svg');
     background-size: cover;
-   
+    /* background-position: center center; */
+   position: relative;
 }
 .headersub-title{
     font-size: 20px;
@@ -75,18 +78,24 @@ body{
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 600;
+    line-height: 2em;
+}
+.warranty-title{
+    font-size: 15px;
+    font-weight: 700;
 }
 .header-circles{
     max-width: 250px;
+
 }
 .fujisu-logo{
-    max-width:150px;
+    max-width:250px;
     position: absolute;
     top:30px;
-    left:0px;
+    left:100px;
 }
 .fujisu-logo-mobile{
-    max-width:100px;
+    max-width:150px;
  
 }
 .fujisu-header{
@@ -94,28 +103,89 @@ body{
     margin-bottom: -50px;
 }
 .move-right{
-    margin-left:100px;
+    margin-left:200px;
+}
+.right-move{
+    margin-left:50px;
+    
 }
 
-@media (max-width: 767.98px) { 
+.fujisu-or{
+    width:100%; 
+    text-align:center; 
+    border-bottom: 1px solid #fff; 
+    line-height:0.1em; 
+    margin:10px 0 20px;
+    font-size: 20px;
+}
+.fujisu-or span { 
+    background:#bd3249;
+    padding:0 10px; 
+   
+}
+
+.social-login{
+    max-width: 200px;
+    padding:10px 20px;
+}
+.social-login:hover{
+    opacity: 0.8;
+}
+
+.social-wapper{
+    position: absolute;
+    left:30px;
+    top:60%;
+    transform: translate(0, -50%);
+    width:20px;
+}
+.social-icon{
+    width:20px;
+}
+.social-line{
+    width:10px;
+    height: 15px;
+    border-right:1px solid #fff;
+    margin:5px 0;
+}
+
+.tick{
+    width: 20px;
+}
+
+/* Media Media Media Media Media Media  */
+@media (max-width: 767.98px){
     .header-wapper{
         background-image: url('../img/mobile-header.svg');
+        background-size: cover;
+       /* background-position: top center; */
+       background-repeat: no-repeat;
     }
     .move-right{
         margin-left:0;
     }
+    .header-warranty{
+        padding:0 20%;
+    }
 }
 @media (max-width: 1199.98px) { 
+    .fujisu-header{
+        width:80%;
+        margin:auto;
+    }
+    
+   
+    .right-move{
+        margin-left:0;
+    }
     .fujisu-logo{
         max-width:100px;
         top:20px;
     }
+   
 }
 
 @media (max-width: 575.98px) { 
-    .header-warranty{
-        font-size: 16px;
-    }
     
     .form-wapper{
         padding: 30px 3%;
@@ -125,10 +195,29 @@ body{
         font-size: 19px;
        
     }
-  
     .fujisu-header{
-       
+        width:100%;
         margin-bottom: 0px;
+    }
+
+    .social-wapper{
+        position: absolute;
+        left:10px;
+        top:38%;
+        width:20px;
+    }
+    .header-title{
+        font-size: 25px;
+    }
+    .header-circles{
+        width: 150px;
+    }
+    .social-icon{
+        width: 15px;
+    }
+    .social-line{
+        height: 10px;
+        margin:0;
     }
 }
 
