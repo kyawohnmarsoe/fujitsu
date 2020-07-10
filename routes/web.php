@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $user = null;
+    return view('welcome', ['user' => $user]);
 });
 
 // Route::get('/fujisu-user', function () {
@@ -37,8 +38,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/google', 'SocialLoginController@redirectGoogle');
 Route::get('/callback', 'SocialLoginController@googleCallback');
 
-// Route::get('/facebook', 'SocialLoginController@redirectFacebook');
-// Route::get('/callback', 'SocialLoginController@facebookCallback');
+Route::get('/facebook', 'SocialLoginController@redirectFacebook');
+Route::get('/fbcallback', 'SocialLoginController@facebookCallback');
 
 Route::get('/thankyou', function () {
     return view('thankyou');

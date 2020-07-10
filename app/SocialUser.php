@@ -8,7 +8,7 @@ class SocialUser extends Model
 {
     
     protected $fillable = [
-        'name', 'email', 'phone' ,'password',
+        'name', 'email', 'phone' ,'subject' ,'password',
     ];
 
    

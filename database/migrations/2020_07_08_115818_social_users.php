@@ -16,9 +16,9 @@ class SocialUsers extends Migration
         Schema::create('social_users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('phone')->nullable();
-            $table->string('social_id')->nullable();
+            $table->string('subject')->nullable();
             $table->timestamps();
         });
 

@@ -104,13 +104,31 @@
                       <form method="post" action="{{ url('/submitinfo') }}" class="fujisu-form px-lg-5" >
                       @csrf
                         <div class="form-group px-lg-5 px-lg-5">
-                          <input type="text" class="form-control" name="name" placeholder="Name:" required />
+                        @if ($user)
+                            <input type="text" class="form-control" name="name" placeholder="Name:" required value="{{ $user->name }}" />
+                        @else
+                            <input type="text" class="form-control" name="name" placeholder="Name:" required />
+                        @endif
                         </div>
+                       
                         <div class="form-group px-lg-5 px-lg-5">
-                          <input type="text" class="form-control" name="phone" placeholder="Phone Number:" required />
-                        </div>
-                        <div class="form-group px-lg-5 px-lg-5">
+                        @if ($user)
+                            <input type="email" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="E-mail Address:" required value="{{ $user->email }}" />
+                        @else
                           <input type="email" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="E-mail Address:" required />
+                          @endif
+                        </div>
+
+                        <div class="form-group px-lg-5 px-lg-5">
+                            <input type="text" class="form-control" name="phone" placeholder="Phone Number:" required />
+                        </div>
+
+                        <div class="form-group px-lg-5 px-lg-5">
+                          <select class="form-control" name="subject">
+                            <option value="1">I am looking for: </option>
+                            <option value="2">A brand new air conditioner</option>
+                            <option value="3">A replacement to my old unit</option>
+                          </select>
                         </div>
                        
                         <div class="form-group form-check py-4">
@@ -122,6 +140,8 @@
                           <li>Specifically and expressly consent to the use of website tracking methods, including cookies, and to the safe and secure transmission of your personal information in accordance with the Privacy Policy.</li>
                           </ul>
                         </div>
+
+
                         <div class="form-group text-center">
                         <button type="submit" class="btn btn-fujisu ">Submit</button>
                         </div>

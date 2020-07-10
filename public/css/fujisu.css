@@ -58,6 +58,9 @@ body{
 .form-wapper input{
     border-radius: 20px;
 }
+.form-wapper select{
+    border-radius: 20px;
+}
 .header-wapper{
     background-image: url('../img/top.svg');
     background-size: cover;

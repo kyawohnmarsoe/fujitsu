@@ -90,7 +90,8 @@
      <section>
             <div class="container ">
                   <div class="form-wapper white-text text-center">
-                    <h1>Thank You!</h1>
+                  <h1>Thank You for your submission! </h1>
+<h3> Our sales consultant will get in touch with you shortly.</h3>
                   </div>
             </div>
      </section>
