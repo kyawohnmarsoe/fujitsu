@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Socialite;
 use App\SocialUser;
 use App\Mail\NotifyMail;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SocialLoginController extends Controller
 {
@@ -16,16 +18,29 @@ class SocialLoginController extends Controller
         // if($existingUser){
         //     return redirect('/thankyou');
         // }else { }
+        
+        if  ($user['subject'] == "2") {
+            $sub = "A brand new air conditioner";
+        }elseif  ($user['subject'] == "3") {
+            $sub = "A replacement to my old unit";
+        }else{
+            $sub = "Not Specify";
+        }
+        
             SocialUser::create([
                 'name' => $user['name'],
                 'email' => $user['email'],
                 'phone' => $user['phone'],
-                'subject' => $user['subject'],
+                'subject' => $sub,
             ]);
            
-            \Mail::to('kohnmars@gmail.com')->send(new NotifyMail($user));
+            \Mail::to('contact@winfinity.com.sg')->cc('waiyin@lhm.com.sg')->send(new NotifyMail($user,$sub));
+            
+            //  \Mail::to('erica.ho@lhm.com.sg')->send(new NotifyMail($user,$sub));
+            
+            // dd($subject);
         
-            return redirect('/thankyou');
+            return view('thankyou');
        
     }
 
@@ -49,5 +64,11 @@ class SocialLoginController extends Controller
     {
             $user = Socialite::driver('facebook')->user();
             return view('welcome', ['user' => $user]);
+    }
+
+    public function export() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+        // return User::all();
     }
 }

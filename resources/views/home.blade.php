@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Fujisu Customers List</div>
+                <div class="card-header">Fujitsu Customers List</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,7 +19,7 @@
                     <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Email</th>
@@ -31,18 +31,12 @@
   @if ($users)
     @foreach ($users as $key=>$user)
     <tr>
-        <th>{{ ++$key }}</th>
+        <th>{{ $user->id }}</th>
         <td>{{ $user->name }}</td>
         <td>{{ $user->phone }}</td>
         <td>{{ $user->email }}</td>
-        <td>
-          @if ($user->subject == 2)
-          <span>A brand new air conditioner</span>
-          @elseif ($user->subject == 3)
-          <span>A replacement to my old unit</span>
-          @else 
-          <span>Not Specify</span>
-          @endif
+        <td>{{ $user->subject }}
+          
         </td>
       </tr>
     @endforeach
@@ -53,9 +47,7 @@
   </tbody>
 </table>
 
-
-
-
+{{ $users->links() }}
 
                 </div>
             </div>

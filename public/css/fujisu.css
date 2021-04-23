@@ -78,17 +78,17 @@ body{
     line-height: 1.2em;
 }
 .header-warranty{
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
     line-height: 2em;
 }
 .warranty-title{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
 }
 .header-circles{
-    max-width: 250px;
+    max-width: 300px;
 
 }
 .fujisu-logo{
@@ -98,7 +98,7 @@ body{
     left:100px;
 }
 .fujisu-logo-mobile{
-    max-width:150px;
+    max-width:200px;
  
 }
 .fujisu-header{
@@ -141,6 +141,7 @@ body{
     top:60%;
     transform: translate(0, -50%);
     width:20px;
+    z-index:3;
 }
 .social-icon{
     width:20px;
@@ -155,22 +156,35 @@ body{
 .tick{
     width: 20px;
 }
+.pearl-img{
+    width:100px;
+}
 
 /* Media Media Media Media Media Media  */
-@media (max-width: 767.98px){
-    .header-wapper{
-        background-image: url('../img/mobile-header.svg');
-        background-size: cover;
-       /* background-position: top center; */
-       background-repeat: no-repeat;
+
+@media (min-width: 1920px) {
+    .my-container{
+        max-width:1600px;
+        margin:auto;
     }
-    .move-right{
-        margin-left:0;
+    .pearl-img{
+        width:150px;
+    }
+    .header-title{
+        font-size:37px;
+    }
+    .header-circles{
+        width:375px;
     }
     .header-warranty{
-        padding:0 20%;
+        font-size:17px;
     }
+    .warranty-title{
+        font-size:19px;
+    }
+    
 }
+
 @media (max-width: 1199.98px) { 
     .fujisu-header{
         width:80%;
@@ -185,7 +199,31 @@ body{
         max-width:100px;
         top:20px;
     }
+    .header-warranty{
+         font-size: 19px;
+    }
+    .warranty-title{
+        font-size:21px;
+    }
    
+}
+
+@media (max-width: 767.98px){
+    .header-wapper{
+        background-image: url('../img/mobile-header.svg');
+        background-size: cover;
+       /* background-position: top center; */
+       background-repeat: no-repeat;
+    }
+    .move-right{
+        margin-left:0;
+    }
+    .header-warranty{
+        /*padding:0 20%;*/
+        max-width:300px;
+        margin:auto;
+       
+    }
 }
 
 @media (max-width: 575.98px) { 
@@ -213,7 +251,7 @@ body{
         font-size: 25px;
     }
     .header-circles{
-        width: 150px;
+        max-width: 100%;
     }
     .social-icon{
         width: 15px;

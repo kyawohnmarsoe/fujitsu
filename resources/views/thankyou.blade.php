@@ -3,17 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Fujisu</title>
-
-        <!-- Fonts -->
+        <title>Fujitsu</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
-
-    <link href="{{ asset('css/fujisu.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('bootstrap4/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/fujisu.css') }}" rel="stylesheet">
     </head>
     <body>
 
@@ -29,24 +23,24 @@
             <a href="#"><img src="{{ asset('img/global.svg') }}" alt="website" class="social-icon"></a>
           </div>
 
-
             <div class="pt-5" style=" position: relative;">
 
-             <a href="{{url('/')}}">  <img src="{{ asset('img/logo.png') }}" alt="" class="fujisu-logo d-none d-lg-block"> </a>
+             <a href="{{url('/')}}">  <img src="{{ asset('img/logo2.png') }}" alt="" class="fujisu-logo d-none d-lg-block"> </a>
               <div class="d-lg-flex align-items-end move-right">
                       <div class=" col-lg-4  pl-lg-4 pb-lg-4 mt-lg-5">
-                      <a href="{{url('/')}}"> <img src="{{ asset('img/logo.png') }}" alt="" class="fujisu-logo-mobile d-block d-lg-none m-auto">
+                      <a href="{{url('/')}}"> <img src="{{ asset('img/logo2.png') }}" alt="" class="fujisu-logo-mobile d-block d-lg-none m-auto">
 </a>
                          
                           <div class="headersub-title red-text ">
-                            The Pearl Series
+                            <!--The Pearl Series-->
+                            <img src="https://winfinity.cool/public/img/Asset31.png" alt="" class="py-3 pearl-img">
                           </div>
                           <div class="header-title">
                               the intelligent <br>
                               choice <br>
                               in comfort
                           </div>
-                          <img src="{{ asset('img/Asset4.png') }}" alt="" class="header-circles py-3 d-none d-lg-block">
+                          <img src="{{ asset('img/Asset41.png') }}" alt="" class="header-circles py-3 d-none d-lg-block">
                           <div class="header-title red-text d-none d-lg-block">
                             free
                           </div>
@@ -58,11 +52,11 @@
 
                       </div>
                       <div class="col-lg-8 right-move" >
-                        <img src="{{ asset('img/Asset3.png') }}" alt="" class="fujisu-header d-none d-lg-block" />
-                        <img src="{{ asset('img/Asset21.png') }}" alt="" class="fujisu-header d-block d-lg-none" />
+                        <img src="{{ asset('img/Asset51.png') }}" alt="" class="fujisu-header d-none d-lg-block" />
+                        <img src="{{ asset('img/Asset50.png') }}" alt="" class="fujisu-header d-block d-lg-none" />
 
                        
-                        <img src="{{ asset('img/Asset4.png') }}" alt="" class="header-circles py-3 d-block d-lg-none m-auto">
+                        <img src="{{ asset('img/Asset41.png') }}" alt="" class="header-circles py-3 d-block d-lg-none m-auto">
                          
                               <div class=" d-block d-lg-none text-left ">
                                   <div class="header-title red-text text-center">
@@ -77,10 +71,6 @@
 
                       </div>
                 </div>
-
-                
-              
-              
             </div>
           </div>
     </section>
@@ -102,34 +92,9 @@
      <img src="{{ asset('img/bottom.svg') }}" alt="" class="img-fluid" style="margin-bottom:-3px;" >
      </section>
 
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      <script src="{{ asset('js/app.js') }}" defer></script>
-
-<!-- fb login  -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '720247318739713',
-      cookie     : true,
-      xfbml      : true,
-      version    : '{api-version}'
-    });
-      
-    FB.AppEvents.logPageView();   
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-    </body>
+<script src="{{ asset('bootstrap4/jquery-3.5.1.slim.min.js') }}" ></script>
+<script src="{{ asset('bootstrap4/popper.min.js') }}" ></script>
+<script src="{{ asset('bootstrap4/bootstrap.min.js') }}" ></script>
+<script src="{{ asset('js/app.js')}}"></script>
+</body>
 </html>

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+
+use App\SocialUser;
+
 class HomeController extends Controller
 {
     /**
@@ -24,7 +27,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $users = DB::table('social_users')->get();
+         // $users = DB::table('social_users')->get();
+        $users= SocialUser::orderBy('id','DESC')->paginate(20);
 
         return view('home', ['users' => $users]);
         

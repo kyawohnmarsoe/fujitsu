@@ -12,6 +12,7 @@ class NotifyMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $user;
+    public $sub;
     public $test;
 
     /**
@@ -19,9 +20,10 @@ class NotifyMail extends Mailable
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct($user,$sub)
     {
         $this->user = $user;
+        $this->sub = $sub;
         $this->test = "test";
     }
 
@@ -32,6 +34,6 @@ class NotifyMail extends Mailable
      */
     public function build()
     {
-        return $this->view('notifymail');
+        return $this->subject('New Customer Update')->view('notifymail');
     }
 }
